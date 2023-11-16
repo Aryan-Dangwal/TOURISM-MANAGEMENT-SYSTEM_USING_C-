@@ -1,0 +1,169 @@
+#include<iostream>
+#include<stdlib.h>
+#include<string>
+#include<ctime>
+#include<fstream>
+
+#ifndef _BOOKING_CLASS_H
+#define _BOOKING_CLASS_H
+class BookingClass {
+public:
+    int booking_id;
+    std::string booking_type;
+    std::string booking_description;
+    std::string booking_date;
+    std::string booking_hotel_id;
+
+    void addBooking();
+    void editBooking();
+    void deleteBooking();
+    void searchBooking();
+};
+#endif //_BOOKING_CLASS_H
+
+#ifndef _CUSTOMER_CLASS_H
+#define _CUSTOMER_CLASS_H
+class CustomerClass {
+public:
+    int customer_id;
+    std::string customer_name;
+    std::string customer_mobile;
+    std::string customer_email;
+    std::string customer_address;
+    std::string customer_username;
+    std::string customer_password;
+
+    void addCustomer();
+    void editCustomer();
+    void deleteCustomer();
+    void searchCustomer();
+};
+#endif //_CUSTOMER_CLASS_H
+
+#ifndef _HOTEL_CLASS_H
+#define _HOTEL_CLASS_H
+class HotelClass {
+public:
+    int hotel_id;
+    std::string hotel_name;
+    std::string hotel_description;
+    std::string hotel_type;
+    std::string hotel_address;
+    std::string hotel_rent;
+
+    void addHotel();
+    void editHotel();
+    void deleteHotel();
+    void searchHotel();
+};
+#endif //_HOTEL_CLASS_H
+
+#ifndef _PERMISSION_CLASS_H
+#define _PERMISSION_CLASS_H
+class PermissionClass {
+public:
+    int permission_id;
+    int permission_role_id;
+    std::string permission_title;
+    std::string permission_module;
+    std::string permission_description;
+
+    void addPermission();
+    void editPermission();
+    void deletePermission();
+    void searchPermission();
+};
+#endif //_PERMISSION_CLASS_H
+
+#ifndef _ROLE_CLASS_H
+#define _ROLE_CLASS_H
+class RoleClass {
+public:
+    int role_id;
+    std::string role_title;
+    std::string role_description;
+
+    void addUser();
+    void editUser();
+    void deleteRole();
+    void searchRole();
+    void assignRole();
+};
+#endif //_ROLE_CLASS_H
+
+#ifndef _TRANSPORTATION_CLASS_H
+#define _TRANSPORTATION_CLASS_H
+class TransportationClass {
+public:
+    int transportation_id;
+    std::string transportation_name;
+    std::string transportation_description;
+    int transportation_tour_id;
+
+    void addTransportation();
+    void editTransportation();
+    void deleteTransportation();
+    void searchTransportation();
+};
+#endif //_TRANSPORTATION_CLASS_H
+
+#ifndef _TRAVEL_AGENT_CLASS_H
+#define _TRAVEL_AGENT_CLASS_H
+class TravelAgentClass {
+public:
+    int travel_agent_id;
+    int travel_agent_college_id;
+    std::string travel_agent_name;
+    std::string travel_agent_mobile;
+    std::string travel_agent_email;
+    std::string travel_agent_address;
+    std::string travel_agent_username;
+    std::string travel_agent_password;
+
+    void addTravelAgent();
+    void editTravelAgent();
+    void deleteTravelAgent();
+    void searchTravelAgent();
+};
+#endif //_TRAVEL_AGENT_CLASS_H
+
+#ifndef _USER_CLASS_H
+#define _USER_CLASS_H
+#include "PermissionClass.h"
+#include "RoleClass.h"
+#include "PermissionClass.h"
+
+class UserClass : public UserClass, public PermissionClass, public PermissionClass,
+    public RoleClass, public PermissionClass {
+public:
+    int user_id;
+    int user_role_id;
+    std::string user_name;
+    std::string user_email;
+    time_t user_dob; // Changed 'date' to 'time_t'
+    std::string user_address;
+
+    void addUser();
+    void editUser();
+    void deleteUser();
+    void searchUser();
+};
+#endif //_USER_CLASS_H
+
+// Implement the member functions for each class
+void BookingClass::addBooking() {
+    // Implement the function
+}
+
+// ... Implement member functions for other classes
+
+void UserClass::addUser() {
+    // Implement the function
+}
+
+// ... Implement member functions for other classes
+
+int main() {
+    // You can add your main program logic here
+    return 0;
+}
