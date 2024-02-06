@@ -1,4 +1,4 @@
-# TOURISM-MANAGEMENT-SYSTEM_USING_C-
+# TOURISM-MANAGEMENT-SYSTEM_USING_C++
 
 Most of the people in this world like to travel from one place to another no matter whether it
 is a small or large distance. The need for a tourism management system that can manage
